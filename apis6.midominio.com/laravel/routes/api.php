@@ -20,9 +20,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/v1/categorias', [CategoriasController::class, 'getAll']);
-
 Route::post('/v1/categorias', [CategoriasController::class, 'store']);
 
+Route::put('/v1/categorias/{id}', [CategoriasController::class, 'update']);
+Route::patch('/v1/categorias/{id}', [CategoriasController::class, 'patchUpdate']);
 
+
+Route::delete('/v1/categorias/{id}', [CategoriasController::class, 'delete']);
 
 
