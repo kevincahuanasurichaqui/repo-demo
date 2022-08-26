@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
  
 class ProductosController extends Controller
 {
-   
+    // get all  
     public function getProductos()
     {
       $response_local=new \stdClass();
